@@ -1,0 +1,49 @@
+<ion-header >
+  <ion-toolbar class="fondologin">
+    
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+         
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+         <ion-img src="/assets/icono.jpeg" ></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+    <ion-title><h2>Inicio</h2></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding fondologin">
+   
+    <ion-list>
+      <ion-item *ngFor="let c of componentes"
+          [routerLink] = "c.redirecTo"
+          detail="true"> 
+          <ion-icon [name]="c.icon"
+            slot="start"
+            color="primary"></ion-icon> 
+            {{c.name}}
+      </ion-item>
+   </ion-list>
+
+   <ion-card >
+    <ion-card-header >
+      <ion-img src="assets/1.jpg "></ion-img>
+      <ion-card-title><h2>Lo mejor para tus mascotas</h2></ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content >
+      <p>Con esta app podrás encontrar lo que necesites para tu mascota, ya sea el cuidado o la compra de medicamentos.</p>
+    </ion-card-content>
+  </ion-card>
+ 
+   
+
+  
+
+    
+</ion-content>

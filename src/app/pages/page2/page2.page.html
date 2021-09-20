@@ -1,0 +1,91 @@
+<ion-header >
+  <ion-toolbar class="fondologin">
+    
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+         
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+         <ion-img src="/assets/icono.jpeg" ></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+    <ion-title><h2>Cómo <br>cuidarlos</h2></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding fondologin">
+   
+  <ion-list>
+    <ion-item *ngFor="let c of componentes"
+        [routerLink] = "c.redirecTo"
+        detail="true"> 
+        <ion-icon [name]="c.icon"
+          slot="start"
+          color="primary"></ion-icon> 
+          {{c.name}}
+    </ion-item>
+ </ion-list>
+  
+  
+
+ <ion-slides [options]="option" class="ion-margin-top ion-padding" >
+  <ion-slide>
+    <ion-card width="2333">
+      <ion-title><h2>Tips para <br>perros</h2></ion-title>
+      <ion-img src="/assets/perro.jpg"></ion-img>
+      <ion-card-content >
+       <p>1) Acaricia a tu perro.<br>
+       2)Hazle hacer ejercicio<br>
+       3) Premia su buen comportamiento<br>   
+       4) Alimentación<br>
+       5) Higiene del animal <br></p>
+       <ion-button href="https://www.timbrit.cl/blog/cuidados-basicos-para-tu-perro/" target="_blank">Ver más</ion-button>
+      </ion-card-content>
+      
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-title><h2>Tips para <br>gatos</h2></ion-title>
+      <ion-img src="/assets/gato.jpg"></ion-img>
+      <ion-card-content>
+        <p>
+          1) La buena alimentación<br>
+          2)cambiar diariamente la arena <br>  
+          3) deben ser bañados desde pequeños.                     <br>
+          4) Debemos vacunar y desparasitar                     <br>
+          5)Debemos tener cuidado con cables y enchufes                    <br>   
+          <ion-button href="https://www.whiskas.es/gatitos/cuidados" target="_blank">Ver más</ion-button>
+
+        </p>
+      </ion-card-content>
+      
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-title><h2>Tips para <br>hamsters</h2></ion-title>
+      <ion-img src="/assets/hamster.jpg"></ion-img>
+      <ion-card-content>
+        <p>
+          1) Sácalo de su jaula y juega con él <br>
+          2) Dedícale un rato de tu tiempo todos los días.  <br>  
+          3) Respeta sus horas de sueño                  <br>
+          4) No lo bañes nunca                  <br>
+          5) Limpia su jaula una vez a la semana con agua y jabón                <br>   
+
+          <ion-button href="https://www.royalcanin.com/cl/cats/thinking-of-getting-a-cat/how-to-care-for-a-kitten-or-cat?utm_source=google&utm_medium=cpc&utm_campaign=ao_2020&utm_term=como-cuidar-un-gato&utm_content=health-is_cat&gclid=EAIaIQobChMI3rbT3p798gIVlKXICh1GpAqvEAAYAiAAEgLOCPD_BwE" target="_blank">Ver más</ion-button>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+
+</ion-slides>
+  </ion-content>
