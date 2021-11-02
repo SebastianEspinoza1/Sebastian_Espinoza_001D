@@ -24,6 +24,18 @@ const routes: Routes = [
     path: 'form',
     loadChildren: () => import('./pages/form/form.module').then( m => m.FormPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registrar',
+    loadChildren: () => import('./pages/registrar/registrar.module').then( m => m.RegistrarPageModule)
+  },
+  {
+    path: 'api',
+    loadChildren: () => import('./pages/api/api.module').then( m => m.ApiPageModule)
+  },
 ];
 
 @NgModule({

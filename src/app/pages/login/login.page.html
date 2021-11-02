@@ -1,0 +1,47 @@
+<ion-header >
+  <ion-toolbar class="fondologin"> 
+    <ion-buttons slot="start"> <ion-back-button 
+     defaultHref="/" 
+     text="Back"
+      color="primary"
+       mode="ios"> 
+     </ion-back-button> 
+       </ion-buttons>
+
+   <ion-buttons slot="end">
+     <ion-avatar>
+        <ion-img src="/assets/icono.jpeg" ></ion-img>
+     </ion-avatar>
+   </ion-buttons>
+   <ion-title><h3>Iniciar sesión</h3></ion-title>
+   <a *ngIf="userLogged | async as user">
+    {{user.email}}
+  </a>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondologin">
+<ion-title><h3>Ingrese datos</h3></ion-title>
+  <div class="container-fondologin">
+    <div class="card text-center">
+    <div class="card-body-fondologin">
+      <ion-item>
+        <ion-label position="floating">Email: </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="usuario.email">
+        </ion-input>
+          <ion-label position="floating">Contraseña: </ion-label>
+          <ion-input type="password" placeholder="" [(ngModel)]="usuario.password">
+          </ion-input>
+      </ion-item>
+      <div class="fondologin">
+      <ion-button  expand="block" color="dark" class=" m-4"   (click)="Ingresar()"routerLink="/inicio"  >Ingresar</ion-button>
+      <ion-button  expand="block" color="danger" class=" m-4" (click)="IngresarConGoogle()"><ion-icon class="margin-left" name="logo-google"></ion-icon>Continuar con Google</ion-button>
+      <ion-label>  Aun no tienes cuenta? 
+      <a routerLink="#">Registrarse</a>
+      </ion-label>
+      <ion-button (click)="logout()">Desloggearse</ion-button>
+    </div>
+  </div>
+  </div>
+</div>
+  </ion-content>

@@ -20,13 +20,13 @@ export class AppComponent {
   componentes : Componente[] =[
     {
       icon: 'paw-outline',
-      name: 'cuidado de mascotas', 
+      name: 'Cuidado de mascotas', 
       redirecTo: '/page2'
     },
     {
       icon: 'sunny-outline', 
-      name: 'Tienda de mascotas', 
-      redirecTo: '/'
+      name: 'Noticias', 
+      redirecTo: '/api'
     },
     
   

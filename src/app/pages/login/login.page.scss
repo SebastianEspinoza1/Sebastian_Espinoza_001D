@@ -1,0 +1,25 @@
+.conteiner{
+    display: block;
+    justify-content:center;
+    align-items: center;
+    width: 100vw;
+    height: 400vh;
+   
+
+}
+.fondologin{
+    --ion-background-color: radial-gradient(circle at 47.02% 49.2%, #9bffff 0, #79f5f3 25%, #48e1e5 50%, #00cdd8 75%, #00bcce 100%);
+    text-align: center}
+.background{
+    background-color: radial-gradient(circle at 47.02% 49.2%, #9bffff 0, #79f5f3 25%, #48e1e5 50%, #00cdd8 75%, #00bcce 100%);
+}
+
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:black;
+    font-size: medium;
+    }
+    ion-card-title{
+        color: white;
+        font-size: 20px;
+    }

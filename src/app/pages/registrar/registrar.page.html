@@ -1,0 +1,65 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar class="fondologin"> 
+    <ion-buttons slot="start"> <ion-back-button 
+     defaultHref="/bienvenida" 
+     text="Back"
+      color="primary"
+       mode="ios"> 
+     </ion-back-button> 
+       </ion-buttons>
+
+   <ion-buttons slot="end">
+     <ion-avatar>
+        <ion-img src="/assets/icono.jpeg" ></ion-img>
+     </ion-avatar>
+   </ion-buttons>
+   <ion-title><h3>Administración</h3></ion-title>
+ </ion-toolbar>
+</ion-header>
+
+
+
+
+  <ion-content class="ion-padding fondologin" [fullscreen]="true">
+    <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+      <ion-title>Crear usuario</ion-title>
+      <ion-item>
+        <ion-label position="floating"> ingrese un nombre</ion-label>
+    <ion-input type="text" placeholder="ingrese su nombre" [(ngModel)]="usuario.nombre">
+
+    </ion-input>
+  
+</ion-item>
+        <ion-item>
+          <ion-label position="floating"> ingrese correo</ion-label>
+
+    <ion-input type="email" placeholder="ingrese su correo" [(ngModel)]="usuario.email">
+
+    </ion-input>
+
+  
+</ion-item>
+<ion-item>
+  <ion-label position="floating"> ingrese contraseña</ion-label>
+    <ion-input type="password" placeholder="ingrese su contraseña" [(ngModel)]="usuario.password"></ion-input>
+
+  
+</ion-item>   
+<br> 
+    <ion-button (click)="altaUsuario()"> Crear usuario
+    </ion-button>
+    <h2>Lista de usuarios </h2>
+    <h6>toca usuario para eliminar</h6>
+    
+    
+      <ion-list *ngFor="let user of listaDeUsuarios"(click)="eliminar(user.id)"><p>{{user | json}} </p> </ion-list>
+
+    
+    <ion-button (click)="modificar()" >
+      Modificar usuarios
+    </ion-button>
+  </form>
+
+
+  </ion-content>
+  
