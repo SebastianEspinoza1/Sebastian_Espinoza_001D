@@ -9,9 +9,9 @@ import { AuthService } from '../../services/auth.service';
 export class RegistrarPage  implements OnInit{
 usuario = {
 
-  nombre:'spuketo',
-  email:'Sebastian76@gmail.com',
-  password:'123456'
+  nombre:"seba",
+  email:"Sebastian76@gmail.com",
+  password:"123456"
 }
 
 listaDeUsuarios=[];
@@ -58,7 +58,7 @@ eliminar(id){
 
   }
 modificar(){
-  let id="vbfH9d5kBYKhIuq9Fzkj";
+  let id="Kv4gsGg5wcWhVWWx7qUY";
   this.database.update('usuarios',id,this.usuario).then(res =>{
     alert("Se modificó usuario");
   }).catch(err=>{

@@ -35,9 +35,9 @@
       </ion-item>
       <div class="fondologin">
       <ion-button  expand="block" color="dark" class=" m-4"   (click)="Ingresar()"routerLink="/inicio"  >Ingresar</ion-button>
-      <ion-button  expand="block" color="danger" class=" m-4" (click)="IngresarConGoogle()"><ion-icon class="margin-left" name="logo-google"></ion-icon>Continuar con Google</ion-button>
+      <ion-button  expand="block" color="danger" class=" m-4" (click)="IngresarConGoogle()"routerLink="/inicio" ><ion-icon class="margin-left" name="logo-google"></ion-icon>Continuar con Google</ion-button>
       <ion-label>  Aun no tienes cuenta? 
-      <a routerLink="#">Registrarse</a>
+      <a routerLink="/inicio">Registrarse</a>
       </ion-label>
       <ion-button (click)="logout()">Desloggearse</ion-button>
     </div>
